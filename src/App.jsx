@@ -24,10 +24,13 @@ const App = () => {
   useEffect(() => {
     dispatch(addCampaigns(campaignData.data));
     dispatch(fetchUser());
+    window.addCampaigns = (data) => {
+      dispatch(addCampaigns(data));
+    };
   }, []);
 
-  const handleSearch = (e) => {
-    setSearchText(e.target.value);
+  const handleSearch = ({ target: { value } }) => {
+    setSearchText(value);
   };
 
   const handleDateRangeChange = (dateRange) => {

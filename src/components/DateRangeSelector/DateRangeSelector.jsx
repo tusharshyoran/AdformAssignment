@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "./DateRangeSelector.css";
 
 const DateRangeSelector = (props) => {
@@ -20,6 +21,7 @@ const DateRangeSelector = (props) => {
       onChange({ startDate, endDate });
     } else if (startDate == null || endDate == null) {
       setDateError(false);
+      onChange(null);
     } else {
       if (
         startDate &&

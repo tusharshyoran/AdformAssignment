@@ -1,8 +1,8 @@
-import * as actionTypes from '../actions/actionType';
+import * as actionTypes from "../actions/actionType";
 
 const initialState = {
-  campaigns: null,
-  users: null,
+  campaigns: [],
+  users: [],
   error: null,
   loading: false,
 };
@@ -12,7 +12,7 @@ const campaign = (state = initialState, action) => {
     case actionTypes.ADD_CAMPAIGNS:
       return {
         ...state,
-        campaigns: action.payload,
+        campaigns: state.campaigns.concat(action.payload),
       };
     case actionTypes.FETCH_START:
       return { ...state, loading: true };

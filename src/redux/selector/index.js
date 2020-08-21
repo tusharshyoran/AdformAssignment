@@ -1,5 +1,5 @@
-import { createSelector } from 'reselect';
-import moment from 'moment';
+import { createSelector } from "reselect";
+import moment from "moment";
 
 export const selectCampaignData = (state) => {
   return state.campaigns;
@@ -31,20 +31,19 @@ export const selectCampaigns = createSelector(
           moment(dateRange.endDate).isSameOrAfter(moment(endDate))
         );
       });
-    } else {
-      let actualCampaigns = userData.map((user) => {
-        return campaignData.filter((campaign) => {
-          return campaign.userId === user.id;
-        });
-      });
-      filteredCampaigns = actualCampaigns.flat();
     }
 
     if (searchText) {
       filteredCampaigns = filteredCampaigns.filter(({ name }) =>
-        name.includes(searchText)
+        name.toLowerCase().includes(searchText.toLowerCase())
       );
     }
+
+    filteredCampaigns = filteredCampaigns.map((camp) => {
+      const user = userData.find((user) => user.id === camp.userId);
+      camp.name = user ? user.name : "Unknown User";
+      return camp;
+    });
 
     return filteredCampaigns;
   }
