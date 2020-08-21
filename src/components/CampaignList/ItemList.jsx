@@ -1,13 +1,14 @@
 import React from "react";
 import { formatBudget } from "../../utils";
 import PropTypes from "prop-types";
+import "font-awesome/css/font-awesome.min.css";
 
 const UserList = ({ campName, name, startDate, endDate, budget }) => {
   return (
     <tbody>
       <tr>
         <th scope="row">{campName}</th>
-        <td>{name ? name : "Unknown User"}</td>
+        <td>{name}</td>
         <td>{startDate}</td>
         <td>{endDate}</td>
         <td>
