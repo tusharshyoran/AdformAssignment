@@ -1,0 +1,8 @@
+.date-error {
+  border: 1px solid red !important;
+}
+
+.date-error-text {
+  color: red;
+  margin-left: 5px;
+}
