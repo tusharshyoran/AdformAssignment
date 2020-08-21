@@ -2,22 +2,22 @@ import { createSelector } from 'reselect';
 import moment from 'moment';
 
 export const selectCampaignData = (state) => {
-  return state.campaign.campaigns;
+  return state.campaigns;
 };
 
 export const selectUserData = (state) => {
-  return state.campaign.users;
+  return state.users;
 };
 
 export const selectIsLoading = (state) => {
-  return state.campaign.isLoading;
+  return state.loading;
 };
 
 export const selectError = (state) => {
-  return state.campaign.error;
+  return state.error;
 };
 
-export const getUsers = createSelector(
+export const selectCampaigns = createSelector(
   selectCampaignData,
   selectUserData,
   (_, { dateRange }) => dateRange,
@@ -31,6 +31,13 @@ export const getUsers = createSelector(
           moment(dateRange.endDate).isSameOrAfter(moment(endDate))
         );
       });
+    } else {
+      let actualCampaigns = userData.map((user) => {
+        return campaignData.filter((campaign) => {
+          return campaign.userId === user.id;
+        });
+      });
+      filteredCampaigns = actualCampaigns.flat();
     }
 
     if (searchText) {

@@ -1,12 +1,12 @@
-import React from 'react';
-import UserList from './UserList.jsx';
-import { useSelector } from 'react-redux';
-import { getUsers } from '../../redux/selector/index';
-import PropTypes from 'prop-types';
+import React from "react";
+import ItemList from "./ItemList.jsx";
+import { useSelector } from "react-redux";
+import { selectCampaigns } from "../../redux/selector/index";
+import PropTypes from "prop-types";
 
-const Camptable = ({ dateRange, searchText }) => {
-  let userArr = useSelector((state) =>
-    getUsers(state, { dateRange, searchText })
+const CampTable = ({ dateRange, searchText }) => {
+  const campArr = useSelector((state) =>
+    selectCampaigns(state, { dateRange, searchText })
   );
 
   return (
@@ -23,15 +23,15 @@ const Camptable = ({ dateRange, searchText }) => {
           </tr>
         </thead>
 
-        {userArr.map((user) => {
-          return <UserList key={user.id} {...user} />;
+        {campArr.map((user) => {
+          return <ItemList key={user.id} {...user} />;
         })}
       </table>
     </div>
   );
 };
-Camptable.propTypes = {
+CampTable.propTypes = {
   dateRange: PropTypes.object,
   searchText: PropTypes.string,
 };
-export default Camptable;
+export default CampTable;

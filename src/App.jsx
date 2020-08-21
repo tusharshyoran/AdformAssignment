@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { addCampaigns } from './redux/actions';
-import { fetchUser } from './redux/thunks';
-import Loader from './components/Loader/Loader.jsx';
-import Camptable from './components/CampaignList/Camptable.jsx';
-import { selectUserData, selectIsLoading, selectError } from './redux/selector';
-import DateRangeSelector from './components/DateRangeSelector/DateRangeSelector.jsx';
-import SearchControl from './components/SearchControl/SearchControl.jsx';
-import Error from './components/Error/Error';
-import campaignData from './data.json';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+import { addCampaigns } from "./redux/actions";
+import { fetchUser } from "./redux/thunks";
+import Loader from "./components/Loader/Loader.jsx";
+import Camptable from "./components/CampaignList/CampTable.jsx";
+import { selectUserData, selectIsLoading, selectError } from "./redux/selector";
+import DateRangeSelector from "./components/DateRangeSelector/DateRangeSelector.jsx";
+import SearchControl from "./components/SearchControl/SearchControl.jsx";
+import Error from "./components/Error/Error";
+import campaignData from "./data.json";
 
 const App = () => {
   const [dateRange, setDateRange] = useState(null);
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
 
   const isLoading = useSelector((state) => selectIsLoading(state));
   const userData = useSelector((state) => selectUserData(state));

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-import DatePicker from 'react-datepicker';
-import './DateRangeSelector.css';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import moment from "moment";
+import DatePicker from "react-datepicker";
+import "./DateRangeSelector.css";
 
 const DateRangeSelector = (props) => {
   const { dateRange, showMonthDropdown, showYearDropdown, onChange } = props;
@@ -50,7 +50,7 @@ const DateRangeSelector = (props) => {
         onChange={handleStartDateChange}
       />
 
-      <div className={dateError ? 'date-error' : ''}>
+      <div className={dateError ? "date-error" : ""}>
         <DatePicker
           placeholderText="End Date"
           selected={endDate}

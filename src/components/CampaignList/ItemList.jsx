@@ -1,13 +1,13 @@
-import React from 'react';
-import { formatBudget } from '../../utils';
-import PropTypes from 'prop-types';
+import React from "react";
+import { formatBudget } from "../../utils";
+import PropTypes from "prop-types";
 
 const UserList = ({ campName, name, startDate, endDate, budget }) => {
   return (
     <tbody>
       <tr>
         <th scope="row">{campName}</th>
-        <td>{name ? name : 'Unknown User'}</td>
+        <td>{name ? name : "Unknown User"}</td>
         <td>{startDate}</td>
         <td>{endDate}</td>
         <td>
@@ -16,16 +16,16 @@ const UserList = ({ campName, name, startDate, endDate, budget }) => {
               <i
                 className="fa fa-circle"
                 aria-hidden="true"
-                style={{ color: 'green' }}
+                style={{ color: "green" }}
               ></i>
-              <span> Active</span>
+              <span>Active</span>
             </>
           ) : (
             <>
               <i
                 className="fa fa-circle"
                 aria-hidden="true"
-                style={{ color: 'red' }}
+                style={{ color: "red" }}
               ></i>
               <span> Inactive</span>
             </>
