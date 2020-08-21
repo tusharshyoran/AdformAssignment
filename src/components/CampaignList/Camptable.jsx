@@ -1,7 +1,7 @@
 import React from 'react';
 import UserList from './UserList.jsx';
 import { useSelector } from 'react-redux';
-import { getUsers } from '../../redux/selector/selector';
+import { getUsers } from '../../redux/selector/index';
 import PropTypes from 'prop-types';
 
 const Camptable = ({ dateRange, searchText }) => {

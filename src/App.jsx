@@ -2,14 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addCampaigns } from './redux/actions';
-import { fetchUser } from './redux/thunks/middleware';
+import { fetchUser } from './redux/thunks';
 import Loader from './components/Loader/Loader.jsx';
 import Camptable from './components/CampaignList/Camptable.jsx';
-import {
-  selectUserData,
-  selectIsLoading,
-  selectError,
-} from './redux/selector/selector';
+import { selectUserData, selectIsLoading, selectError } from './redux/selector';
 import DateRangeSelector from './components/DateRangeSelector/DateRangeSelector.jsx';
 import SearchControl from './components/SearchControl/SearchControl.jsx';
 import Error from './components/Error/Error';

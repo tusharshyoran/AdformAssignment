@@ -7,12 +7,12 @@ const initialState = {
   loading: false,
 };
 
-export default function campaign(state = initialState, action) {
+const campaign = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_CAMPAIGNS:
       return {
         ...state,
-        campaigns: action.payload
+        campaigns: action.payload,
       };
     case actionTypes.FETCH_START:
       return { ...state, loading: true };
@@ -29,4 +29,6 @@ export default function campaign(state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default campaign;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatBudget } from '../../utility';
+import { formatBudget } from '../../utils';
 import PropTypes from 'prop-types';
 
 const UserList = ({ campName, name, startDate, endDate, budget }) => {

@@ -16,20 +16,18 @@ const DateRangeSelector = (props) => {
 
   useEffect(() => {
     if (startDate && endDate && moment(endDate).isAfter(moment(startDate))) {
-      onChange({ startDate, endDate });
       setDateError(false);
-    }
-    if (endDate == null) {
+      onChange({ startDate, endDate });
+    } else if (startDate == null || endDate == null) {
       setDateError(false);
     } else {
-      onChange(null);
       if (
         startDate &&
         endDate &&
         moment(endDate).isSameOrBefore(moment(startDate))
       ) {
         setDateError(true);
-        //alert('Please check the order of dates');
+        onChange(null);
       }
     }
   }, [startDate, endDate]);

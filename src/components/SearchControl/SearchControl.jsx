@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './SearchControl.css';
-function SearchControl({ handleSearch, searchText }) {
+const SearchControl = ({ handleSearch, searchText }) => {
   return (
     <div className="search-right">
       <input
@@ -13,7 +13,7 @@ function SearchControl({ handleSearch, searchText }) {
       ></input>
     </div>
   );
-}
+};
 SearchControl.propTypes = {
   handleSearch: PropTypes.func,
   searchText: PropTypes.string,
