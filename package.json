@@ -28,7 +28,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:watch": "jest --watchAll  --verbose",
-    "test:coverage": "jest --verbose --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
