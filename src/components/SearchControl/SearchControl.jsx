@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './SearchControl.css';
+import "./SearchControl.css";
 const SearchControl = ({ handleSearch, searchText }) => {
   return (
     <div className="search-right">
       <input
         type="text"
         value={searchText}
-        placeholder="Search by name"
+        placeholder="Search"
         onChange={handleSearch}
       ></input>
     </div>
