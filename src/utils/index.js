@@ -1,3 +1,6 @@
 export const formatBudget = (budget) => {
-  return budget.toString().slice(0, 3) + 'k';
+  return Intl.NumberFormat("en-US", {
+    notation: "compact",
+    compactDisplay: "short",
+  }).format(budget);
 };

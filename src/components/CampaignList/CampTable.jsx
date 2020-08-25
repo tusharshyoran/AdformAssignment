@@ -23,8 +23,8 @@ const CampTable = ({ dateRange, searchText }) => {
           </tr>
         </thead>
 
-        {campArr.map((user) => {
-          return <ItemList key={user.id} {...user} />;
+        {campArr.map((camp) => {
+          return <ItemList key={camp.id} {...camp} />;
         })}
       </table>
     </div>

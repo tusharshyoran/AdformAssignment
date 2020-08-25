@@ -34,8 +34,11 @@ export const selectCampaigns = createSelector(
     }
 
     if (searchText) {
-      filteredCampaigns = filteredCampaigns.filter(({ name }) =>
-        name.toLowerCase().includes(searchText.toLowerCase())
+      filteredCampaigns = filteredCampaigns.filter(
+        ({ name, campName, budget }) =>
+          name.toLowerCase().includes(searchText.toLowerCase()) ||
+          campName.toLowerCase().includes(searchText.toLowerCase()) ||
+          budget.toString().includes(searchText)
       );
     }
 

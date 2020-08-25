@@ -1,9 +1,17 @@
 import React from "react";
 import { formatBudget } from "../../utils";
+import { removeCampaign } from "../../redux/actions";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import "font-awesome/css/font-awesome.min.css";
 
-const UserList = ({ campName, name, startDate, endDate, budget }) => {
+const UserList = ({ id, campName, name, startDate, endDate, budget }) => {
+  const dispatch = useDispatch();
+
+  const handleRemoveClick = () => {
+    dispatch(removeCampaign(id));
+  };
+
   return (
     <tbody>
       <tr>
@@ -33,6 +41,15 @@ const UserList = ({ campName, name, startDate, endDate, budget }) => {
           )}
         </td>
         <td>{formatBudget(budget)}</td>
+        <td>
+          <span
+            id={id}
+            style={{ cursor: "pointer" }}
+            onClick={(e) => handleRemoveClick(e)}
+          >
+            <i className="fa fa-trash-o" aria-hidden="true"></i>
+          </span>
+        </td>
       </tr>
     </tbody>
   );

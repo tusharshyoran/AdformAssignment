@@ -32,7 +32,7 @@
       "name": "Trilith",
       "startDate": "8/25/2020",
       "endDate": "11/30/2020",
-      "budget": 179838,
+      "budget": 1798380000,
       "userId": 1,
       "campName": "Campaign 1"
     },
@@ -41,7 +41,7 @@
       "name": "Layo",
       "startDate": "3/28/2020",
       "endDate": "11/10/2020",
-      "budget": 837850,
+      "budget": 837.85,
       "userId": 9,
       "campName": "Campaign 9"
     },
@@ -59,7 +59,7 @@
       "name": "Blogtag",
       "startDate": "2/27/2020",
       "endDate": "4/15/2020",
-      "budget": 109078,
+      "budget": 109078000,
       "userId": 2,
       "campName": "Campaign 2"
     },
@@ -77,7 +77,7 @@
       "name": "Zoomcast",
       "startDate": "9/6/2020",
       "endDate": "11/10/2020",
-      "budget": 301919,
+      "budget": 301919000,
       "userId": 10,
       "campName": "Campaign 10"
     },
@@ -86,7 +86,7 @@
       "name": "Realbridge",
       "startDate": "10/2/2020",
       "endDate": "12/5/2020",
-      "budget": 505602,
+      "budget": 50560200,
       "userId": 6,
       "campName": "Campaign 6"
     }

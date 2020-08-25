@@ -14,6 +14,11 @@ const campaign = (state = initialState, action) => {
         ...state,
         campaigns: state.campaigns.concat(action.payload),
       };
+    case actionTypes.REMOVE_CAMPAIGN:
+      return {
+        ...state,
+        campaigns: state.campaigns.filter((camp) => camp.id !== action.payload),
+      };
     case actionTypes.FETCH_START:
       return { ...state, loading: true };
     case actionTypes.FETCH_SUCCESS:

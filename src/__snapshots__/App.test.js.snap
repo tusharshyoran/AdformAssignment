@@ -1,3 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should render correctly 1`] = `ShallowWrapper {}`;
+exports[`App should render correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="mt-4"
+  >
+    <div
+      className="flex-container"
+    >
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            className=""
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Start Date"
+            readOnly={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className=""
+      >
+        <div
+          className="react-datepicker-wrapper"
+        >
+          <div
+            className="react-datepicker__input-container"
+          >
+            <input
+              className=""
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="End Date"
+              readOnly={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="search-right"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Search by name"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="mt-4"
+    >
+      <div>
+        <table
+          className="table"
+        >
+          <thead>
+            <tr>
+              <th
+                scope="col"
+              >
+                Name
+              </th>
+              <th
+                scope="col"
+              >
+                User Name
+              </th>
+              <th
+                scope="col"
+              >
+                Start Date
+              </th>
+              <th
+                scope="col"
+              >
+                End Date
+              </th>
+              <th
+                scope="col"
+              >
+                Active
+              </th>
+              <th
+                scope="col"
+              >
+                Budget
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
