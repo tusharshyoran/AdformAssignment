@@ -19,7 +19,7 @@ const DateRangeSelector = (props) => {
     if (startDate && endDate && moment(endDate).isAfter(moment(startDate))) {
       setDateError(false);
       onChange({ startDate, endDate });
-    } else if (startDate == null || endDate == null) {
+    } else if (startDate === null || endDate === null) {
       setDateError(false);
       onChange(null);
     } else {
